@@ -26,8 +26,3 @@ test('should filter the list of rentals by city.', function(assert) {
 test('should show details for the selected rental.', function(assert) {
 
 });
-
-  andThen(function() {
-    assert.equal(currentURL(), '/');
-  });
-});
