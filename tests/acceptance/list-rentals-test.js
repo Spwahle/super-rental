@@ -4,15 +4,29 @@ import moduleForAcceptance from 'super-rental/tests/helpers/module-for-acceptanc
 moduleForAcceptance('Acceptance | list rentals');
 
 test('should show rentals as the home page.', function(assert) {
+  visit('/')
+  andThen(function() {
+    assert.equal(currentURL(), '/rentals', 'should redirect automatically to rentals page');
 
+  });
 });
 
 test('should link to information about the company.', function(assert) {
+  visit('/')
+  click('a:contains("About")');
+  andThen(function() {
+    assert.equal(currentURL(), '/about', 'should navigate to about page when clicked');
 
+  });
 });
 
 test('should link to contact information.', function(assert) {
+  visit('/')
+  click('a:contains("Contact")');
+  andThen(function() {
+    assert.equal(currentURL(), '/contact', 'should navigate to contact page when clicked');
 
+  });
 });
 
 test('should list available rentals.', function(assert) {
