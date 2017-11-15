@@ -6,7 +6,7 @@ moduleForAcceptance('Acceptance | list rentals');
 test('should show rentals as the home page.', function(assert) {
   visit('/')
   andThen(function() {
-    assert.equal(currentURL(), '/rentals', 'should redirect automatically to rentals page');
+    assert.equal(find('.listing').length, 3 , 'should see 3 listings');
 
   });
 });
