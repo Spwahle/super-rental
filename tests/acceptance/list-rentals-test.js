@@ -3,11 +3,10 @@ import moduleForAcceptance from 'super-rental/tests/helpers/module-for-acceptanc
 
 moduleForAcceptance('Acceptance | list rentals');
 
-test('should show rentals as the home page.', function(assert) {
-  visit('/')
+test('should list available rentals.', function (assert) {
+  visit('/');
   andThen(function() {
-    assert.equal(find('.listing').length, 3 , 'should see 3 listings');
-
+    assert.equal(find('.listing').length, 3, 'should see 3 listings');
   });
 });
 
